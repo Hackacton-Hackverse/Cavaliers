@@ -1,7 +1,9 @@
 package com.cavaliers.task_API.model;
 
-import jakarta.persistence.*;
+
 import lombok.*;
+
+import javax.persistence.*;
 
 @NoArgsConstructor
 @AllArgsConstructor

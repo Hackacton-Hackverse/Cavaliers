@@ -2,6 +2,7 @@ package com.cavaliers.task_API.controller;
 
 import com.cavaliers.task_API.model.Task;
 import com.cavaliers.task_API.service.ServiceTask;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +11,7 @@ import java.util.List;
 @RestController
 @RequestMapping
 @CrossOrigin("*")
+@Tag(name = "Task")
 public class ControllerTask {
     @Autowired
     private ServiceTask serviceTask;
