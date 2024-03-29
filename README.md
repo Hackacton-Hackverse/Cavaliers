@@ -18,8 +18,8 @@
 * Lancer un émulateur ou brancher son propre téléphone.
 * puis taper `flutter run ` pour executer le projet ou alors lancer sa compilation et son éxecution à partir de votre IDE **Visual Studio Code** ou **Android Studio**.
 
-### ou 
-Télécharger le fichier `\build\app\outputs\flutter-apk\` dans son téléphonne et l'installer. Puis jouissez de l'application.
+<!--### ou 
+Télécharger le fichier `\build\app\outputs\flutter-apk\` dans son téléphonne et l'installer. Puis jouissez de l'application.-->
 
 ## Utilisation
 
