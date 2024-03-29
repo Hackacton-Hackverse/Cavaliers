@@ -4,7 +4,12 @@ import 'package:to_do_list/tache.dart';
 class ShowTask extends StatelessWidget {
   final Tache task;
   final VoidCallback cancelShow;
-  const ShowTask({super.key, required this.task, required this.cancelShow});
+  final Function(Tache t) modifyTask;
+  const ShowTask(
+      {super.key,
+      required this.task,
+      required this.cancelShow,
+      required this.modifyTask});
 
   @override
   Widget build(BuildContext context) {
@@ -66,9 +71,11 @@ class ShowTask extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                const TextButton(
-                    onPressed: null,
-                    child: Text(
+                TextButton(
+                    onPressed: () {
+                      modifyTask(task);
+                    },
+                    child: const Text(
                       "Modifier",
                       style: TextStyle(fontSize: 18),
                     )),

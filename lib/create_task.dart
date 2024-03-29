@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:to_do_list/folder.dart';
+import 'package:to_do_list/services/gestion_de_folder.dart';
+import 'package:to_do_list/services/gestion_de_tache.dart';
 import 'package:to_do_list/tache.dart';
 
 // ignore: must_be_immutable
@@ -18,6 +21,7 @@ class CreateTask extends StatefulWidget {
 
 class _CreateTaskState extends State<CreateTask> {
   late Tache task;
+  final formkey = GlobalKey<FormState>();
 
   @override
   void initState() {
@@ -26,9 +30,24 @@ class _CreateTaskState extends State<CreateTask> {
     task = widget.task;
   }
 
+  void validationForm() {
+    if (formkey.currentState!.validate()) {
+      formkey.currentState!.save();
+      if (widget.isModification == true) {
+        GestionTache.modifyTask(task);
+      } else {
+        GestionTache.addTask(task);
+        task.taskFolder.nbreDeTache++;
+        GestionFolder.modifyFolder(task.taskFolder);
+      }
+      widget.cancelShow();
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Form(
+      key: formkey,
       child: IntrinsicHeight(
         child: Container(
           alignment: Alignment.center,
@@ -104,14 +123,14 @@ class _CreateTaskState extends State<CreateTask> {
                   mainAxisAlignment: MainAxisAlignment.end,
                   children: [
                     TextButton(
-                        onPressed: null,
+                        onPressed: validationForm,
                         child: Text(
                           widget.isModification ? "Modifier" : "Ajouter",
                           style: const TextStyle(fontSize: 18),
                         )),
                     TextButton(
                         onPressed: widget.cancelShow,
-                        child: Text(
+                        child: const Text(
                           "Annuler",
                           style: TextStyle(fontSize: 18),
                         ))
