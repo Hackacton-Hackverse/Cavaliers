@@ -16,6 +16,7 @@ public class Task {
     private Integer id;
     private boolean active;
     private String description;
+    private String titre;
 
     public String getDescription() {
         return description;
@@ -23,6 +24,14 @@ public class Task {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public String getTitre() {
+        return titre;
+    }
+
+    public void setTitre(String titre) {
+        this.titre = titre;
     }
 
     public boolean isActive() {

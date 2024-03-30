@@ -32,6 +32,7 @@ public class ServiceTask {
     public Task updateTask(Integer id, Task task){
         Task up = repositoryTask.findById(id).get();
         up.setDescription(task.getDescription());
+        up.setTitre(task.getTitre());
         return repositoryTask.save(up);
     }
     public Task activeOrDisactivate(Integer id){
