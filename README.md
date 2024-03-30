@@ -6,7 +6,7 @@
 </p>
 <p>
   Etape 2:
-  cloner le projet avec 'git clone --branch backend https://github.com/Hackacton-Hackverse/Cavaliers.git'
+  cloner le projet avec `git clone --branch backend https://github.com/Hackacton-Hackverse/Cavaliers.git`
 
 </p>
 <p>
