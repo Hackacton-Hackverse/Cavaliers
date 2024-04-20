@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Style/admin_style.css">
+    <script src="login_script.js"></script>
+    <title>admin_login</title>
+</head>
+<body>
+    <section id="admin_login"> 
+        <div id="img_admin_login">
+            <img src="images/img_login_admin.png" alt="img_login_admin">
+        </div>
+        <div id="admin_form">
+            <fieldset>
+                <h3> Admin </h3>
+                <form>
+                    <div id="user_name">
+                        <div id="form_input">
+                            <label for="user_name">Name : </label>
+                            <input id="name_input" type="text" name="user_name"/>
+                        </div>
+                        <img src="images/user-solid.svg">
+                    </div>
+                    <div id="password_form" >
+                        <div id="password">
+                            <div class="form-input">
+                                <label for="mdp">password:</label>
+                                <input id="password_input" type="password" name="pwd"/>
+                            </div>
+                            <button id="toggle-button"><img src="images/eye-solid.svg"></button>
+                        </div>
+                        <a href="forgot_password">forgot password ?</a>
+                    </div> 
+                    <div class="submit_login">
+                        <div class="submit">
+                            <input type="submit" name="submssion" value="Login" onclick="Authentification()">  
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+            <div id="not_sign">
+                <p>
+                    you don't have an account ?
+                </p>
+                <a href="Sign.com"> Sign up </a>
+            </div>
+        </div>
+    </section> 
+</body>
+</html>
