@@ -1,10 +1,10 @@
-package com.cavaliers.task_API;
+package com.cavaliers.campus_connect_API;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class TaskApiApplicationTests {
+class CampusConnectApiApplicationTests {
 
 	@Test
 	void contextLoads() {
